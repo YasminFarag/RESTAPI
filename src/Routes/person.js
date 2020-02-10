@@ -5,6 +5,8 @@ let router = express.Router();
     router.get('/person', (req,res)=> {
         // queryString => is basically a query property on the request object
         // localhost 3000/person?name 'anything after question mark is a part of queryString and it's a key value pair
+        //localhost 3000/person?name=thomas&age=24
+        // this is part of the querystring
         if(req.query.name){
             res.send(`you have requested a person ${req.query.name  }`)
         }else{
@@ -13,6 +15,7 @@ let router = express.Router();
     });
 // params property on the request object
 // adding sub route
+//localhost 3000/person/thomas
 // this is part of route
     router.get('/person/:name', (req,res) => {
         res.send(`you have requested a person ${req.param.name}`)
