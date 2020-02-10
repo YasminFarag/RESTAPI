@@ -18,7 +18,7 @@ app.use((req,res,next) => { // next is reference to the next function in the pip
     
     next();
 })
-// tell express to register this route
+// tell express to register these routes
 app.use(personRoute);
 app.use(customerRoutes)
 // tell express to use this specific static file handler 'also known as a middlware its built into  express
