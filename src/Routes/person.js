@@ -2,6 +2,8 @@ let express = require('express');
 let router = express.Router();
 
 // this created router can be accessed via localhost 3000
+
+// QUERY STRING
     router.get('/person', (req,res)=> {
         // queryString => is basically a query property on the request object
         // localhost 3000/person?name 'anything after question mark is a part of queryString and it's a key value pair
@@ -13,6 +15,7 @@ let router = express.Router();
         res.send('you are connected');
         }
     });
+    //REQUEST PARAMETERS
 // params property on the request object
 // adding sub route
 //localhost 3000/person/thomas
